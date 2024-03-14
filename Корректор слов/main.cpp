@@ -10,7 +10,7 @@ int main() {
     Dictionary dictionary;
     dictionary.loadDictionary("dictionary.txt");
     std::string inputWord;
-    std::cout << "Введите слово: ";
+    std::cout << "Enter a word: ";
     std::cin >> inputWord;
     dictionary.print(dictionary.getRoot(),0);
     cout<<endl;
@@ -20,7 +20,7 @@ int main() {
     if ((g>=40)&&(g<100)){
         cout<<y;
     }else if(g<40){
-        cout<<"Нет такого слова";
+        cout<<"There is no such word";
     }else if(g==100){
         cout<<"Ok";
     }
