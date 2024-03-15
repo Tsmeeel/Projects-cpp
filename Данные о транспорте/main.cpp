@@ -5,43 +5,43 @@
 int main() {
     SetConsoleOutputCP(1251);
     Lorry lorry("Volvo", 6, 500, 2000);
-    std::cout << "До переобозначения:" << std::endl;
-    std::cout << "Марка грузовика: " << *lorry.getBrand() << std::endl;
-    std::cout << "Мощность грузовика: " << *lorry.getPower() << std::endl;
-    std::cout << "Грузоподъёмность грузовика: " << *lorry.getweight() << std::endl;
+    std::cout << "Before redesignation:" << std::endl;
+    std::cout << "Truck make: " << *lorry.getBrand() << std::endl;
+    std::cout << "Truck Power: " << *lorry.getPower() << std::endl;
+    std::cout << "Truck load capacity: " << *lorry.getweight() << std::endl;
     std::cout << std::endl;
 
     lorry.setPower(600);
     lorry.updateweight(500);
-    std::cout << "После переобозначения: " << std::endl;
-    std::cout << "Марка грузовика: " << *lorry.getBrand() << std::endl;
-    std::cout << "Мощность грузовика: " << *lorry.getPower() << std::endl;
-    std::cout << "Грузоподъёмность грузовика: " << *lorry.getweight() << std::endl;
+    std::cout << "After redesignation: " << std::endl;
+    std::cout << "Truck make: " << *lorry.getBrand() << std::endl;
+    std::cout << "Truck Power: " << *lorry.getPower() << std::endl;
+    std::cout << "Truck load capacity: " << *lorry.getweight() << std::endl;
 
     std::cout << std::endl;
 
     Car car("Mercedes", 12, 800);
-    std::cout << "До переобозначения:" << std::endl;
-    std::cout << "Марка машины: " << *car.getBrand() << std::endl;
-    std::cout << "Мощность машины: " << *car.getPower() << std::endl;
+    std::cout << "Г„Г® ГЇГҐГ°ГҐГ®ГЎГ®Г§Г­Г Г·ГҐГ­ГЁГї:" << std::endl;
+    std::cout << "ГЊГ Г°ГЄГ  Г¬Г ГёГЁГ­Г»: " << *car.getBrand() << std::endl;
+    std::cout << "ГЊГ®Г№Г­Г®Г±ГІГј Г¬Г ГёГЁГ­Г»: " << *car.getPower() << std::endl;
     std::cout << std::endl;
     car.upPower(50);
 
-    std::cout << "После чиповки двигателя:" << std::endl;
-    std::cout << "Марка машины: " << *car.getBrand() << std::endl;
-    std::cout << "Мощность машины: " << *car.getPower() << std::endl;
+    std::cout << "Before redesignation:" << std::endl;
+    std::cout << "Car make: " << *car.getBrand() << std::endl;
+    std::cout << "Car power: " << *car.getPower() << std::endl;
     std::cout << std::endl;
 
     Car car1(car);
-    std::cout << "Копирование" << std::endl;
-    std::cout << "Марка машины: " << *car.getBrand() << std::endl;
-    std::cout << "Мощность машины: " << *car.getPower() << std::endl;
+    std::cout << "After engine chipping" << std::endl;
+    std::cout << "Car make: " << *car.getBrand() << std::endl;
+    std::cout << "Car power: " << *car.getPower() << std::endl;
     std::cout << std::endl;
 
     Lorry lorry1(lorry);
-    std::cout << "Присваивание" << std::endl;
-    std::cout << "Марка машины: " << *car.getBrand() << std::endl;
-    std::cout << "Мощность машины: " << *car.getPower() << std::endl;
+    std::cout << "Assignment" << std::endl;
+    std::cout << "Car make: " << *car.getBrand() << std::endl;
+    std::cout << "Car power: " << *car.getPower() << std::endl;
     std::cout << std::endl;
     return 0;
 }
