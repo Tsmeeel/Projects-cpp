@@ -6,35 +6,35 @@ class cmplx{
         double* x;
         double* y;
     public:
-        //коструктор числа по умолчанию
+        //default number constructor
         cmplx();
-        //коструктор числа вводом
+        //number input constructor
         cmplx(double  real, double imag);
-        //оператор копирования
+        //copy operator
         cmplx(const cmplx& other);
-        //оператор присваивания
+        //assignment operator
         cmplx& operator=(const cmplx& other);
-        //оператор сложения
+        //addition operator
         cmplx operator+(const cmplx& other)const;
-        //оператор вычитания
+        //subtraction operator
         cmplx operator-(const cmplx& other)const;
-        //оператор умножения
+        //multiplication operator
         cmplx operator*(const cmplx& other) const;
-        //оператор деления
+        //division operator
         cmplx operator/(const cmplx& other) const;
-        //условие равенства
+        //equality condition
         bool operator==(const cmplx& other)const;
-        //условие неравенства
+        //inequality condition
         bool operator!=(const cmplx& other)const;
-        //1е число больше 2го
+        //1st number is greater than 2nd
         bool operator>(const cmplx& other)const;
-        //1е число меньше 2го
+        //1st number is less than 2nd
         bool operator<(const cmplx& other)const;
-        //оператор вывода
+        //output operator
         friend std::ostream& operator<<(std::ostream& os, const cmplx& cmplx);
-        //оператор ввода
+        //input operator
         friend std::istream& operator>>(std::istream& is, cmplx& cmplx);
-        //деструктор
+        //destructor
         ~cmplx();
 };
 
