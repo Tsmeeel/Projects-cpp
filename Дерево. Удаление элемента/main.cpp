@@ -9,19 +9,19 @@ int main()
     BinaryTree tree;
     int choice;
     do {
-        cout << "Выберите действие:" << endl;
-        cout << "1-Добавить элемент в дерево" << endl;
-        cout << "2-Вывод дерева" << endl;
-        cout << "3-Нахождение parent" << endl;
-        cout << "4-Удаление элемента" << endl;
-        cout << "0-Выход" << endl;
-        cout << "Ваш выбор: ";
+        cout << "Choose an action:" << endl;
+        cout << "1-Add an element to the tree" << endl;
+        cout << "2-Tree output" << endl;
+        cout << "3-Get parent" << endl;
+        cout << "4-Removing an element" << endl;
+        cout << "0-Exit" << endl;
+        cout << "Your choice: ";
         cin >> choice;
 
         switch (choice) {
         case 1: {
             int value;
-            cout << "Введите значение для добавления в дерево: ";
+            cout << "Enter a value to add to the tree: ";
             cin >> value;
             tree.insert(value);
             tree.createReverseLinks(tree.root, nullptr);
@@ -33,7 +33,7 @@ int main()
         }
         case 3: {
             int value;
-            cout << "Введите значение для нахождения parent: ";
+            cout << "Enter a value to get parent: ";
             cin >> value;
             TNode* foundNode = tree.search(tree.root, value);
             if (foundNode != nullptr) {
@@ -46,14 +46,14 @@ int main()
     cin >> value;
     bool deleted = tree.remove(value);
     if (deleted) {
-        cout << "Элемент успешно удален из дерева." << endl;
+        cout << "The element was successfully removed from the tree." << endl;
     } else {
-        cout << "Элемент не найден в дереве." << endl;
+        cout << "Element not found in tree." << endl;
     }
     break;
 }
         case 0: {
-            cout << "Выход из программы." << endl;
+            cout << "Exit the program." << endl;
             break;
         }
         }
