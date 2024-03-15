@@ -13,10 +13,4 @@ int main() {
     q->display();
     cout << endl;
     /*root* x(q);
-    x->display();
-    cout << endl;
-    root* y(p);
-    p->display();
-    root* x=q;
-    q->display();*/
 }
