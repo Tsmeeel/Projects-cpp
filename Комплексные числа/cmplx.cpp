@@ -2,41 +2,41 @@
 #include <iostream>
 #include <cmath>
 
-//коструктор числа по умолчанию
+//default number constructor
 cmplx::cmplx(): x(new double(0.0)), y(new double(0.0)){
 }
-//коструктор числа вводом
+//number input constructor
 cmplx::cmplx(double  real, double imag){
     x=new double;
     y=new double;
     *x=real;
     *y=imag;
 }
-//оператор копирования
+//copy operator
 cmplx::cmplx(const cmplx& fh){
     x=new double;
     *x=*fh.x;
     y=new double;
     *y=*fh.y;
 }
-//оператор присваивания
+//assignment operator
 cmplx& cmplx::operator=(const cmplx& fh){
     *x=*fh.x;
     *y=*fh.y;
 }
-//оператор сложения
+//addition operator
 cmplx cmplx::operator+(const cmplx& fh)const{
     double x1=*x+*fh.x;
     double y1=*y+*fh.y;
     return cmplx(x1,y1);
 }
-//оператор вычитания
+//subtraction operator
 cmplx cmplx::operator-(const cmplx& fh)const{
     double x1=*x-*fh.x;
     double y1=*y-*fh.y;
     return cmplx(x1,y1);
 }
-//оператор умножения
+//multiplication operator
 cmplx cmplx::operator*(const cmplx& fh)const{
     double x1=*x**fh.x;
     double x2=*y**fh.y;
@@ -46,13 +46,13 @@ cmplx cmplx::operator*(const cmplx& fh)const{
     double s2=y1+y2;
     return cmplx(s1,s2);
 }
-//оператор деления
+//division operator
 cmplx cmplx::operator/(const cmplx& fh)const{
     double s1=(*x**fh.x+*y**fh.y)/(pow(*fh.x,2.0)+pow(*fh.y,2.0));
     double s2=(*fh.x**y-*x**fh.y)/(pow(*fh.x,2.0)+pow(*fh.y,2.0));
     return cmplx(s1,s2);
 }
-//условие равенства
+//equality condition
 bool cmplx::operator==(const cmplx& fh)const{
     if((*x==*fh.x)&&(*y==*fh.y)){
         return true;
@@ -60,7 +60,7 @@ bool cmplx::operator==(const cmplx& fh)const{
         return false;
     }
 }
-//условие неравенства
+//inequality condition
 bool cmplx::operator!=(const cmplx& fh)const{
     if((*x!=*fh.x)||(*y!=*fh.y)){
         return true;
@@ -68,7 +68,7 @@ bool cmplx::operator!=(const cmplx& fh)const{
         return false;
     }
 }
-//1е число больше 2го
+//1st number is greater than 2nd
 bool cmplx::operator>(const cmplx& fh)const{
     if((sqrt(pow(*x,2)+pow(*y,2)))>(sqrt(pow(*fh.x,2)+pow(*fh.y,2)))){
         return true;
@@ -76,11 +76,11 @@ bool cmplx::operator>(const cmplx& fh)const{
         return false;
     }
 }
-//1е число меньше 2го
+//1st number is less than 2nd
 bool cmplx::operator<(const cmplx& fh)const{
     return ((sqrt(pow(*x,2)+pow(*y,2)))<(sqrt(pow(*fh.x,2)+pow(*fh.y,2))));
 }
-//оператор вывода
+//output operator
 std::ostream& operator<<(std::ostream& os,const cmplx& cmplx){
     if(*cmplx.x!=0.0){
         os <<*cmplx.x;
@@ -102,12 +102,12 @@ std::ostream& operator<<(std::ostream& os,const cmplx& cmplx){
     }
     return os;
 }
-//оператор ввода
+//input operator
 std::istream& operator>>(std::istream& is,cmplx& cmplx){
     is>>*cmplx.x>>*cmplx.y;
     return is;
 }
-//деструктор
+//destructor
 cmplx::~cmplx(){
     delete x;
     delete y;
