@@ -6,7 +6,9 @@ using namespace std;
 int main(){
     setlocale (LC_ALL,"rus");
     cmplx f1,f2;
+    cout<<"Enter the first complex number"<<endl;
     cin>>f1;
+    cout<<"Enter the second complex number"<<endl;
     cin>>f2;
     cmplx f3(f1);
     cout<<f3<<endl;
@@ -22,7 +24,7 @@ int main(){
     cout<<"f8=f1/f2 "<<f8<<endl;
     cout<<(f1==f2)<<endl;
     cout<<(f1!=f2)<<endl;
-    cout<<"Комплексные числа нельзя сравнить, сравниваем их модули"<<endl;
+    cout<<"Complex numbers cannot be compared, we compare their modulРµ"<<endl;
     cout<<(f1>f2)<<endl;
     cout<<(f1<f2)<<endl;
 }
