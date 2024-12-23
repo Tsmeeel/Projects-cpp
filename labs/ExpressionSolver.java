@@ -4,7 +4,6 @@ import java.util.*;
 
 /** 
  * Класс, вычисляющий знаение выражения.
- * @autor kruch(HallAzzy)
 */
 public class ExpressionSolver {
 	/** поле для хранения выражения */
