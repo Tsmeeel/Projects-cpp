@@ -2,7 +2,6 @@ package com.lab.container;
 
 /** 
  * Класс-контейнер, позволяющий хранить произвольное количество объектов.
- * @autor kruch(HallAzzy)
 */
 
 public class Container<T> {
